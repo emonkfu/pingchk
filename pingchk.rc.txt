@@ -1,0 +1,33 @@
+# Created by pingchk v2001.08.18 - Sat Aug 18 14:46:02 CDT 2001
+# 
+# /home/emonk/pingchk.rc
+#
+# variable descriptions
+# PCHK_exe_mail  path, filename, and flags to mail program
+# PCHK_exe_ping  path and filename of ping program
+# PCHK_logfiles  number of log files to rotate
+# PCHK_mailcc    mailbox (secondary) to send errors to (not used if blank)
+# PCHK_mailfrom  mailbox to report errors from (uses default account if blank)
+# PCHK_mailto    mailbox (primary) to send errors to
+# PCHK_pingx     amount of times to ping sites
+# PCHK_sites     sites that should be pinged
+# PCHK_text_fail text for a failed ping
+# PCHK_text_pass text for a successful ping
+# PCHK_thres_hi  threshold to stop notifying about failed ping checks
+# PCHK_thres_low threshold to start notifying about failed ping checks
+# PCHK_workdir   working directory for program
+# 
+# Make sure QUOTES are around any values with SPACES in them.
+PCHK_exe_mail="/usr/sbin/sendmail -t"
+PCHK_exe_ping="/bin/ping"
+PCHK_logfiles="10"
+PCHK_mailcc=""
+PCHK_mailfrom="Ping Check <emonk@newsnot.com>"
+PCHK_mailto="Jason Woods <emonk@newsnot.com>"
+PCHK_pingx="10"
+PCHK_sites="www.newsnot.com jay.newsnot.com"
+PCHK_text_fail="FAIL"
+PCHK_text_pass="PASS"
+PCHK_thres_hi="4"
+PCHK_thres_low="3"
+PCHK_workdir="/home/emonk/pingchk-logs"
